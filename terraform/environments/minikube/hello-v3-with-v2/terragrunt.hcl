@@ -2,7 +2,7 @@
 # working directory, into a temporary folder, and execute your Terraform commands in that folder.
 
 terraform {
-  source = "git@github.com:lejeunen/helm3-poc.git//terraform/modules/hello-v3"
+  source = "git@github.com:lejeunen/helm3-poc.git//terraform/modules/hello-v3-with-v2"
 }
 
 # Include all settings from the root terragrunt.hcl file
