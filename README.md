@@ -7,7 +7,12 @@ Requirements
 
 ## charts
 [Package and index](https://github.com/lejeunen/helm3-poc/blob/master/charts/build-v2.sh) a v2 chart with Helm v2
+
 [Package and index](https://github.com/lejeunen/helm3-poc/blob/master/charts/build-v2-with-v3.sh) a v2 chart with Helm v3
+
+[Package and index](https://github.com/lejeunen/helm3-poc/blob/master/charts/build-v3.sh) a v3 chart with Helm v3
+
+This proves that charts with different apiVersion can coexist in the same repository
 
 ## deploy v2 app
 Build and deploy the docker image if needed, add the repository to Helm 2, then `terragrunt apply` in _terraform/environments/minikube/hello-v2_
@@ -16,8 +21,11 @@ Build and deploy the docker image if needed, add the repository to Helm 2, then 
 Use the plugin 
 
 ## deploy v3 app
-`terragrunt apply` in _terraform/environments/minikube/hello-v3_
+`terragrunt apply` in _terraform/environments/minikube/hello-v3-with-v2_
 
 This proves that [version 1.0.0 and higher](https://github.com/hashicorp/terraform-provider-helm/blob/master/CHANGELOG.md#100-february-05-2020) of the Terraform Helm plugin can work with Helm 2 charts
 
-## build
+After building the v3 helm chart, use it for a 100% helm v3 scenario
+
+`terragrunt apply` in _terraform/environments/minikube/hello-v3_
+
