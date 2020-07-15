@@ -11,9 +11,9 @@ provider "helm" {
 }
 
 # helm3-poc repository must have been defined
-resource "helm_release" "hello_v3_with_v2" {
-  name = "hello-v3-with-v2"
-  chart = "helm3-poc/hello-v2"
+resource "helm_release" "hello_v3" {
+  name = "hello-v3"
+  chart = "helm3-poc/hello-v3"
   namespace = var.app_namespace
   version = var.chart_version
 }
