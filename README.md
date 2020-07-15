@@ -29,3 +29,12 @@ After building the v3 helm chart, use it for a 100% helm v3 scenario
 
 `terragrunt apply` in _terraform/environments/minikube/hello-v3_
 
+## configure ingress
+Follow [documentation](https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/)
+
+Version 0.2.0 of chart hello-v3 contains ingress configuration.
+
+```
+$ curl minikube.local/hello/hello
+Hello World
+```

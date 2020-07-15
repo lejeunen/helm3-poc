@@ -17,5 +17,5 @@ locals {
 # These are the variables we have to pass in to use the module specified in the terragrunt configuration above
 inputs = {
   app_namespace = local.app_namespace
-  chart_version = "0.1.0"
+  chart_version = "0.2.0"
 }
