@@ -29,7 +29,7 @@ After building the v3 helm chart, use it for a 100% helm v3 scenario
 
 `terragrunt apply` in _terraform/environments/minikube/hello-v3_
 
-## configure ingress
+## ingress for hello-v3
 Follow [documentation](https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/)
 
 Version 0.2.0 of chart hello-v3 contains ingress configuration.
@@ -38,3 +38,10 @@ Version 0.2.0 of chart hello-v3 contains ingress configuration.
 $ curl minikube.local/hello/hello
 Hello World
 ```
+
+## prometheus
+`terragrunt apply` in _terraform/environments/minikube/prometheus_
+
+Access prometheus through http://minikube.local/prometheus
+
+This proves that Helm 2 charts from the stable repository can be used with the updated Terraform Helm plugin.
